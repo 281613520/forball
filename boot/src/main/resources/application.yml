@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    uesrname: root
+    password: 1122
+    url: jdbc:mysql://localhost:3306/forball?useUnicde=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update

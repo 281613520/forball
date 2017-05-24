@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="boot" />
+        <module name="commons" />
+        <module name="config" />
+        <module name="user" />
+        <module name="util" />
+        <module name="visitor" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin" target="1.6" />
+      <module name="boot" target="1.8" />
+      <module name="commons" target="1.8" />
+      <module name="config" target="1.8" />
+      <module name="forball" target="1.8" />
+      <module name="user" target="1.8" />
+      <module name="util" target="1.8" />
+      <module name="visitor" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../forball/boot/boot.iml" filepath="$PROJECT_DIR$/../forball/boot/boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../forball/commons/commons.iml" filepath="$PROJECT_DIR$/../forball/commons/commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../forball/config/config.iml" filepath="$PROJECT_DIR$/../forball/config/config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../forball/forball.iml" filepath="$PROJECT_DIR$/../forball/forball.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../forball/user/user.iml" filepath="$PROJECT_DIR$/../forball/user/user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../forball/util/util.iml" filepath="$PROJECT_DIR$/../forball/util/util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../forball/visitor/visitor.iml" filepath="$PROJECT_DIR$/../forball/visitor/visitor.iml" />
+    </modules>
+  </component>
+</project>

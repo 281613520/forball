@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../forball" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../forball/admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../forball/boot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../forball/commons" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../forball/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../forball/user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../forball/util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../forball/visitor" charset="UTF-8" />
+  </component>
+</project>
