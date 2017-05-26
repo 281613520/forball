@@ -12,6 +12,12 @@
     <artifactId>boot</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.xw</groupId>
+            <artifactId>config</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>
