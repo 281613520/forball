@@ -11,5 +11,20 @@
 
     <artifactId>user</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.xw</groupId>
+            <artifactId>commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.xw</groupId>
+            <artifactId>config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.xw</groupId>
+            <artifactId>util</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>
