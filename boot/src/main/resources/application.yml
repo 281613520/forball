@@ -22,5 +22,5 @@ config:
           max_idle_time: 3600
           url: jdbc:mysql://localhost:3306/forball?useUnicode=true&characterEncoding=UTF-8
           username: root
-          password: 123456
+          password: 1122
           driverClassName: com.mysql.jdbc.Driver

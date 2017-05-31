@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS `tb_admin`;
+DROP TABLE IF EXISTS `admin`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_admin` (
+CREATE TABLE `admin` (
   `id` varchar(255) NOT NULL,
   `is_delete` bit(1) NOT NULL,
   `operation_time` datetime DEFAULT NULL,
@@ -17,10 +17,10 @@ CREATE TABLE `tb_admin` (
 -- Table structure for table `tb_article`
 --
 
-DROP TABLE IF EXISTS `tb_article`;
+DROP TABLE IF EXISTS `article`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_article` (
+CREATE TABLE `article` (
   `id` varchar(255) NOT NULL,
   `is_delete` bit(1) NOT NULL,
   `operation_time` datetime DEFAULT NULL,
@@ -39,10 +39,10 @@ CREATE TABLE `tb_article` (
 -- Table structure for table `tb_module`
 --
 
-DROP TABLE IF EXISTS `tb_module`;
+DROP TABLE IF EXISTS `module`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_module` (
+CREATE TABLE `module` (
   `id` varchar(255) NOT NULL,
   `is_delete` bit(1) NOT NULL,
   `operation_time` datetime DEFAULT NULL,
@@ -55,10 +55,10 @@ CREATE TABLE `tb_module` (
 -- Table structure for table `tb_tag`
 --
 
-DROP TABLE IF EXISTS `tb_tag`;
+DROP TABLE IF EXISTS `tag`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_tag` (
+CREATE TABLE `tag` (
   `id` varchar(255) NOT NULL,
   `is_delete` bit(1) NOT NULL,
   `operation_time` datetime DEFAULT NULL,
