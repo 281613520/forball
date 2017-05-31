@@ -11,23 +11,28 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * Created by Ankh on 2017/5/28.
+ * Created by AnKh on 2017/5/31.
  */
 @Entity
 @Data
 @ToString(callSuper = true)
 @EqualsAndHashCode
 @NoArgsConstructor
-@Table(name = "user")//todo  表还没建
-public class User extends BaseEntity {
+@Table(name="admin")
+public class Admin extends BaseEntity{
     private String username;
+
     private String password;
+
     private String salt;
 
-    public User(LocalDateTime operationTime, boolean isDelete, String username, String password, String salt) {
+    private String token;
+
+    public Admin(LocalDateTime operationTime, boolean isDelete, String username, String password, String salt, String token) {
         super(operationTime, isDelete);
         this.username = username;
         this.password = password;
         this.salt = salt;
+        this.token = token;
     }
 }
