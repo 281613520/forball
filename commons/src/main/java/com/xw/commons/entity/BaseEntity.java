@@ -29,6 +29,8 @@ public abstract class BaseEntity {
 
     private boolean isDelete;
 
+    public BaseEntity(){}
+
     public BaseEntity(LocalDateTime operationTime, boolean isDelete) {
         this.operationTime = operationTime;
         this.isDelete = isDelete;
