@@ -28,11 +28,4 @@ public class Admin extends BaseEntity{
 
     private String token;
 
-    public Admin(LocalDateTime operationTime, boolean isDelete, String username, String password, String salt, String token) {
-        super(operationTime, isDelete);
-        this.username = username;
-        this.password = password;
-        this.salt = salt;
-        this.token = token;
-    }
 }

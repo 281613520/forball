@@ -1,26 +1,27 @@
-package com.xw.user.entity;
+package com.xw.visitor.entity;
 
 import com.xw.commons.entity.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.joda.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * Created by Ankh on 2017/5/28.
+ * Created by Ankh on 2017/6/4.
  */
 @Entity
 @Data
 @ToString(callSuper = true)
 @EqualsAndHashCode
 @NoArgsConstructor
-@Table(name = "user")//todo  表还没建
-public class User extends BaseEntity {
-    private String username;
-    private String password;
-    private String salt;
+@Table(name="module")
+public class Module extends BaseEntity {
+    private String name;
+
+    public Module(String name) {
+        this.name = name;
+    }
 }
