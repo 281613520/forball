@@ -1,10 +1,7 @@
 package com.xw.visitor.entity;
 
 import com.xw.commons.entity.BaseEntity;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -19,9 +16,9 @@ import javax.persistence.Table;
 @Entity
 @EqualsAndHashCode
 public class Tag extends BaseEntity {
-    private String name;
-    private String moduleId;
-    private int articleNum;
+    @Getter@Setter private String name;
+    @Getter@Setter private String moduleId;
+    @Getter@Setter private int articleNum;
 
     private transient Module module;
 

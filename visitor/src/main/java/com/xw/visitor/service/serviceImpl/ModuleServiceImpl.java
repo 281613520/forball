@@ -5,7 +5,6 @@ import com.xw.visitor.dao.ModuleDao;
 import com.xw.visitor.entity.Module;
 import com.xw.visitor.service.ModuleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
