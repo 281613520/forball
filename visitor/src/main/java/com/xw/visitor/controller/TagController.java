@@ -6,6 +6,8 @@ import com.xw.visitor.entity.Tag;
 import com.xw.visitor.service.ModuleService;
 import com.xw.visitor.service.TagService;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController(value = "/tag")
 public class TagController {
+
     @Autowired
     TagService tagService;
     @Autowired
@@ -36,9 +39,10 @@ public class TagController {
         if(tag == null){
             return false;
         }
-        if(!StringUtils.hasText(tag.)) {
+        if(!StringUtils.hasText(tag.getName())){
             return false;
         }
+
         if(!StringUtils.hasText(tag.getModuleId())) {
             return false;
         }
