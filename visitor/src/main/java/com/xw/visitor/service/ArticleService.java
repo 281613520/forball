@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by Ankh on 2017/6/4.
  */
-@Service
+
 public interface ArticleService {
     void save(Article article);
 

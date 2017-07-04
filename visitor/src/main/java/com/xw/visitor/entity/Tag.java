@@ -16,9 +16,9 @@ import javax.persistence.Table;
 @Entity
 @EqualsAndHashCode
 public class Tag extends BaseEntity {
-    @Getter@Setter private String name;
-    @Getter@Setter private String moduleId;
-    @Getter@Setter private int articleNum;
+    private String name;
+    private String moduleId;
+    private int articleNum;
 
     private transient Module module;
 

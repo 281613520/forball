@@ -7,13 +7,14 @@ import com.xw.visitor.entity.Article;
 import com.xw.visitor.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  * Created by Ankh on 2017/6/4.
  */
-//todo
+@Service
 public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleDao articleDao;
