@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.joda.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

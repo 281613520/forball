@@ -1,5 +1,6 @@
 package com.xw.visitor.controller;
 
+import com.xw.commons.page.PageHelper;
 import com.xw.commons.response.ReponseTemplate;
 import com.xw.commons.response.StatusCode;
 import com.xw.visitor.entity.Article;
@@ -9,12 +10,11 @@ import com.xw.visitor.service.ModuleService;
 import com.xw.visitor.service.TagService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.Page;
+import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
+
 
 /**
  * Created by Ankh on 2017/6/9.
@@ -59,12 +59,28 @@ public class ArticleController {
         articleService.delete(article);
         return new ReponseTemplate(StatusCode.SUCCESS);
     }
+
     //查找
     @GetMapping(value = "/article/find")
     public Object findArticle(@PathParam("id") String id){
         Article article = articleService.findById(id);
 
-        return new ReponseTemplate(StatusCode.SUCCESS);
+        return new ReponseTemplate(article);
     }
-    //按照tag分页查找
+
+    //按照tag分页查找,for visitor
+    @GetMapping(value = "/tag/{tagId}/article")
+    public Object findByTagInPage(@PathVariable("tagId") String tagId,
+                                  @RequestParam(value = "page" , required = false ,defaultValue = "1")int page ,
+                                  @RequestParam(value = "size", required = false , defaultValue = "20") int size){
+        return new ReponseTemplate(articleService.findByTagAndInPage(new PageHelper(size,page),tagId).getContent());
+    }
+
+    //for admin
+    @GetMapping(value = "/tag/{tagId}/article")
+    public Object findByTagInPageForAdmin(@PathVariable("tagId") String tagId,
+                                  @RequestParam(value = "page" , required = false ,defaultValue = "1")int page ,
+                                  @RequestParam(value = "size", required = false , defaultValue = "20") int size){
+        return new ReponseTemplate(articleService.findByTagAndInPage(new PageHelper(size,page),tagId).getContent());
+    }
 }

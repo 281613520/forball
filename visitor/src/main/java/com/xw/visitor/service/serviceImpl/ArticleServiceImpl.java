@@ -49,14 +49,19 @@ public class ArticleServiceImpl implements ArticleService {
         return articleDao.findAll();
     }
 
-    @Override
+    /*@Override
     public Page<Object> findByModuleAndInPage(PageHelper pageHelper, String moduleId) {
-        //return articleDao.findByTagIdAndInPage(pageHelper,);
-        return null;
-    }
+
+        return articleDao.;
+    }*/
 
     @Override
     public Page<Object> findByTagAndInPage(PageHelper pageHelper, String tagId) {
         return articleDao.findByTagIdAndInPage(pageHelper,tagId,false);
+    }
+
+    @Override
+    public Page<Object> findByTagAndInPageForAdmin(PageHelper pageHelper, String tagId) {
+        return articleDao.findByTagIdAndInPageForAdmin(pageHelper,tagId);
     }
 }

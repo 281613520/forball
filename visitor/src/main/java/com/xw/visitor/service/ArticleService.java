@@ -23,9 +23,11 @@ public interface ArticleService {
     List<Article> findAll();
     List<Article> findAllForAdmin();
 
-    Page<Object> findByModuleAndInPage(PageHelper pageHelper,String moduleId);
+    //Page<Object> findByModuleAndInPage(PageHelper pageHelper,String moduleId);
 
     Page<Object> findByTagAndInPage(PageHelper pageHelper,String tagId);
+
+    Page<Object> findByTagAndInPageForAdmin(PageHelper pageHelper,String tagId);
 
 
 }

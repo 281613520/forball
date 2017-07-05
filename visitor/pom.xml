@@ -17,10 +17,6 @@
         </dependency>
         <dependency>
             <groupId>com.xw</groupId>
-            <artifactId>boot</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.xw</groupId>
             <artifactId>config</artifactId>
         </dependency>
     </dependencies>

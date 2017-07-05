@@ -4,11 +4,13 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.xw.commons.dbconverter.TimeConverter;
 import lombok.ToString;
+import org.hibernate.annotations.GenericGenerator;
 import org.joda.time.LocalDateTime;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.Convert;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.MappedSuperclass;
 
 /**
@@ -17,8 +19,10 @@ import javax.persistence.MappedSuperclass;
 @ToString
 @MappedSuperclass
 public abstract class BaseEntity {
+
     @Id
-    @GeneratedValue//todo
+    @GeneratedValue(generator = "systemUUID")
+    @GenericGenerator(name="systemUUID",strategy="uuid2")
     private String id;
 
     @Convert(converter = TimeConverter.class)
@@ -28,13 +32,6 @@ public abstract class BaseEntity {
 
 
     private boolean isDelete;
-
-    public BaseEntity(){}
-
-    public BaseEntity(LocalDateTime operationTime, boolean isDelete) {
-        this.operationTime = operationTime;
-        this.isDelete = isDelete;
-    }
 
     public String getId() {
         return id;

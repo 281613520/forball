@@ -27,7 +27,7 @@ public interface ArticleDao extends JpaRepository<Article,String> {
     Page<Object> findByTagIdAndInPage(Pageable pageable, @Param("tagId")String tagId, @Param("isDelete") boolean isDelete);
 
     @Query("select article.id ,article.title,article.tagId from Article article where tagId = :tagId order by title")
-    Page<Object> findByTagIdAndInPage(Pageable pageable, @Param("tagId")String tagId);
+    Page<Object> findByTagIdAndInPageForAdmin(Pageable pageable, @Param("tagId")String tagId);
 
     List<Article> findByTop(boolean isTop);
 
