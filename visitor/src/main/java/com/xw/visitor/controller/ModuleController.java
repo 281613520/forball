@@ -15,18 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by Ankh on 2017/6/9.
  */
 @Slf4j
-@RestController(value = "/module")
+@RestController
 public class ModuleController {
     @Autowired
     ModuleService moduleService;
     //新增，删除，查找
 
-    @GetMapping(value = "/all")
+    @GetMapping(value = "/module/all")
     public Object findAllModules(){
         return new ReponseTemplate(moduleService.findAll());
     }
 
-    @PostMapping(value = "/new")
+    @PostMapping(value = "/admin/module/new")
     public Object addModule(final Module module){
         log.debug("module = {}.",module);
 

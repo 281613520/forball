@@ -13,6 +13,15 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+CREATE TABLE user (
+  `id`             VARCHAR(255) NOT NULL,
+  `is_delete`      BIT(1)       NOT NULL,
+  `operation_time` DATETIME     DEFAULT NULL,
+  `password`       VARCHAR(255) DEFAULT NULL,
+  `salt`           VARCHAR(255) DEFAULT NULL,
+  `username`       VARCHAR(255) DEFAULT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Table structure for table `tb_article`
 --

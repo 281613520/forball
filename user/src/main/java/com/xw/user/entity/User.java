@@ -18,7 +18,7 @@ import javax.persistence.Table;
 @ToString(callSuper = true)
 @EqualsAndHashCode
 @NoArgsConstructor
-@Table(name = "user")//todo  表还没建
+@Table(name = "user")
 public class User extends BaseEntity {
     private String username;
     private String password;

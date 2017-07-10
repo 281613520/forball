@@ -1,17 +1,11 @@
 package com.xw.commons.entity;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import com.xw.commons.dbconverter.TimeConverter;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 import org.joda.time.LocalDateTime;
-import org.springframework.data.annotation.Id;
-
-import javax.persistence.Convert;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 /**
  * Created by AnKh on 2017/5/24.
@@ -23,6 +17,7 @@ public abstract class BaseEntity {
     @Id
     @GeneratedValue(generator = "systemUUID")
     @GenericGenerator(name="systemUUID",strategy="uuid2")
+    @Column(name = "id",unique = true,nullable = false)
     private String id;
 
     @Convert(converter = TimeConverter.class)

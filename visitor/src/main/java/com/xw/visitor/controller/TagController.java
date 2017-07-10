@@ -23,7 +23,7 @@ import java.util.List;
  * Created by Ankh on 2017/6/9.
  */
 @Slf4j
-@RestController(value = "/tag")
+@RestController
 public class TagController {
 
     @Autowired
@@ -31,7 +31,7 @@ public class TagController {
     @Autowired
     ModuleService moduleService;
 
-    @PostMapping(value = "/new")
+    @PostMapping(value = "/admin/tag/new")
     public Object addTag(Tag tag){
         if (!isTagValid(tag)){
             log.error("tag = {}",tag);
@@ -42,7 +42,7 @@ public class TagController {
         return new ReponseTemplate(StatusCode.SUCCESS);
     }
 
-    @DeleteMapping(value = "/{id}")
+    @DeleteMapping(value = "/tag/{id}")
     public Object deleteTagById(@PathParam("id") String id,@PathParam("status") String status){
         log.debug("id = {} , status = {}",id,status);
 
@@ -60,7 +60,7 @@ public class TagController {
         return null;
     }
 
-    @GetMapping(value = "/all")
+    @GetMapping(value = "/tag/all")
     public Object findAllTags(){
         List<Tag> tagList = tagService.findAll();
 

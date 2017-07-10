@@ -29,7 +29,7 @@ public interface ArticleDao extends JpaRepository<Article,String> {
     @Query("select article.id ,article.title,article.tagId from Article article where tagId = :tagId order by title")
     Page<Object> findByTagIdAndInPageForAdmin(Pageable pageable, @Param("tagId")String tagId);
 
-    List<Article> findByTop(boolean isTop);
+    List<Article> findByIsTop(boolean isTop);
 
-    List<Article> findByDelete(boolean isDelete);
+    List<Article> findByIsDelete(boolean isDelete);
 }

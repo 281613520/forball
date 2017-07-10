@@ -4,11 +4,13 @@ import com.xw.user.dao.UserDao;
 import com.xw.user.entity.User;
 import com.xw.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 
 /**
  * Created by AnKh on 2017/5/31.
  */
+@Service
 public class UserSerivceImpl implements UserService{
     @Autowired
     UserDao userDao;

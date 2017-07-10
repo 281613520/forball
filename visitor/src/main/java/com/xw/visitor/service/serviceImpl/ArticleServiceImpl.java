@@ -41,7 +41,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public List<Article> findAll() {
-        return articleDao.findByDelete(false);
+        return articleDao.findByIsDelete(false);
     }
 
     @Override

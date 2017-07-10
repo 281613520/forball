@@ -4,10 +4,12 @@ import com.xw.user.dao.AdminDao;
 import com.xw.user.entity.Admin;
 import com.xw.user.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by AnKh on 2017/5/31.
  */
+@Service
 public class AdminServiceImpl implements AdminService {
     @Autowired
     AdminDao adminDao;

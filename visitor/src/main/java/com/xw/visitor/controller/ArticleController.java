@@ -32,7 +32,7 @@ public class ArticleController {
     TagService tagService;
 
     //新增
-    @PostMapping(value = "/article/new")
+    @PostMapping(value = "/admin/article/new")
     public Object saveArticle(Article article){
         //todo 校验
         articleService.save(article);
@@ -40,7 +40,7 @@ public class ArticleController {
     }
 
     //删除
-    @DeleteMapping(value = "/article/delete")
+    @DeleteMapping(value = "/admin/article/delete")
     public Object deleteArticle(@PathParam("id") String id,@PathParam("status") String status){
         //todo check
 
@@ -69,16 +69,16 @@ public class ArticleController {
     }
 
     //按照tag分页查找,for visitor
-    @GetMapping(value = "/tag/{tagId}/article")
-    public Object findByTagInPage(@PathVariable("tagId") String tagId,
+    @GetMapping(value = "/visitor/tag/{tagId}/article")
+    public Object findArtilcesByTagInPage(@PathVariable("tagId") String tagId,
                                   @RequestParam(value = "page" , required = false ,defaultValue = "1")int page ,
                                   @RequestParam(value = "size", required = false , defaultValue = "20") int size){
         return new ReponseTemplate(articleService.findByTagAndInPage(new PageHelper(size,page),tagId).getContent());
     }
 
     //for admin
-    @GetMapping(value = "/tag/{tagId}/article")
-    public Object findByTagInPageForAdmin(@PathVariable("tagId") String tagId,
+    @GetMapping(value = "/admin/tag/{tagId}/article")
+    public Object findArticlesByTagInPageForAdmin(@PathVariable("tagId") String tagId,
                                   @RequestParam(value = "page" , required = false ,defaultValue = "1")int page ,
                                   @RequestParam(value = "size", required = false , defaultValue = "20") int size){
         return new ReponseTemplate(articleService.findByTagAndInPage(new PageHelper(size,page),tagId).getContent());
