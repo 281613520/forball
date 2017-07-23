@@ -81,6 +81,6 @@ public class ArticleController {
     public Object findArticlesByTagInPageForAdmin(@PathVariable("tagId") String tagId,
                                   @RequestParam(value = "page" , required = false ,defaultValue = "1")int page ,
                                   @RequestParam(value = "size", required = false , defaultValue = "20") int size){
-        return new ReponseTemplate(articleService.findByTagAndInPage(new PageHelper(size,page),tagId).getContent());
+        return new ReponseTemplate(articleService.findByTagAndInPageForAdmin(new PageHelper(size,page),tagId).getContent());
     }
 }

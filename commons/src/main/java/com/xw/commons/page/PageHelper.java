@@ -39,7 +39,7 @@ public class PageHelper implements Pageable {
 
     @Override
     public Pageable next() {
-        this.currentPage ++;
+        this.currentPage++;
         return this;
     }
 
