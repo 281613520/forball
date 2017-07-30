@@ -3,6 +3,7 @@ package com.xw.user.oauth;
 import com.xw.commons.exception.ParamErrorException;
 import com.xw.user.entity.Admin;
 import com.xw.user.service.AdminService;
+import com.xw.utils.PasswordUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -29,7 +30,7 @@ public class PasswordMannager implements AuthenticationManager{
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         String userName = (String) authentication.getPrincipal();
-        String password = (String) authentication.getCredentials();
+        String password = (String) authentication.getCredentials();//前端来的密码
         //todo if null
         if (userName.isEmpty() || password.isEmpty()){
             throw new ParamErrorException("null");
@@ -37,7 +38,7 @@ public class PasswordMannager implements AuthenticationManager{
 
         Admin adminFormDB = adminService.findByUserName(userName);
 
-        if (adminFormDB == null){
+        if (adminFormDB == null || PasswordUtil.authen(adminFormDB.getPassword(),adminFormDB.getSalt(),password)){
             throw new ParamErrorException("111");
         }
 
